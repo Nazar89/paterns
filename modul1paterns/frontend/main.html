@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <title>Book API Interface</title>
+</head>
+<body>
+
+<h1>Book API Interface</h1>
+
+<!-- Create Book Form -->
+<h2>Create a Book</h2>
+<form id="createBookForm">
+    <label for="createTitle">Title:</label>
+    <input type="text" id="createTitle" name="title" required><br>
+    <label for="createAuthor">Author:</label>
+    <input type="text" id="createAuthor" name="author" required><br>
+    <label for="createDescription">Description:</label>
+    <textarea id="createDescription" name="description" required></textarea><br>
+    <label for="createPublishedYear">Published Year:</label>
+    <input type="number" id="createPublishedYear" name="published_year" required><br>
+    <button type="button" onclick="createBook()">Create Book</button>
+</form>
+
+<h2>All Books</h2>
+<button onclick="getAllBooks()">Get All Books</button>
+<div id="allBooks">
+
+</div>
+
+<!-- Read Book Form -->
+<h2>Get a Book</h2>
+<form id="readBookForm">
+    <label for="readBookId">Book ID:</label>
+    <input type="text" id="readBookId" name="id" required><br>
+    <button type="button" onclick="getBook()">Get Book</button>
+</form>
+<div id="bookDetails"></div>
+
+<!-- Update Book Form -->
+<h2>Update a Book</h2>
+<form id="updateBookForm">
+    <label for="updateBookId">Book ID:</label>
+    <input type="text" id="updateBookId" name="id" required><br>
+    <label for="updateTitle">Title:</label>
+    <input type="text" id="updateTitle" name="title"><br>
+    <label for="updateAuthor">Author:</label>
+    <input type="text" id="updateAuthor" name="author"><br>
+    <label for="updateDescription">Description:</label>
+    <textarea id="updateDescription" name="description"></textarea><br>
+    <label for="updatePublishedYear">Published Year:</label>
+    <input type="number" id="updatePublishedYear" name="published_year"><br>
+    <button type="button" onclick="updateBook()">Update Book</button>
+</form>
+
+<!-- Delete Book Form -->
+<h2>Delete a Book</h2>
+<form id="deleteBookForm">
+    <label for="deleteBookId">Book ID:</label>
+    <input type="text" id="deleteBookId" name="id" required><br>
+    <button type="button" onclick="deleteBook()">Delete Book</button>
+</form>
+
+</body>
+</html>
